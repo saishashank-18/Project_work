@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Catalog Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>📚 Library Catalog Management System</h1>
+
+    <div class="actions">
+      <button class="add-btn" onclick="addBook()">Add New Book</button>
+      <button class="remove-btn" onclick="removeBook()">Remove Book</button>
+      <button class="feedback-btn" onclick="sendFeedback()">Feedback</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by title, author, genre, or location..." onkeyup="searchBooks()">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookTable">
+        <tr>
+          <td>1</td>
+          <td>Harry Potter and the Philosopher's Stone</td>
+          <td>J.K. Rowling</td>
+          <td>Fantasy</td>
+          <td>1997</td>
+          <td>Rack 3, Shelf B</td>
+          <td class="action-buttons">
+            <button class="edit-btn" onclick="editBook(1)">Edit</button>
+            <button class="delete-btn" onclick="deleteBook(1)">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>To Kill a Mockingbird</td>
+          <td>Harper Lee</td>
+          <td>Classic</td>
+          <td>1960</td>
+          <td>Rack 1, Shelf A</td>
+          <td class="action-buttons">
+            <button class="edit-btn" onclick="editBook(2)">Edit</button>
+            <button class="delete-btn" onclick="deleteBook(2)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
